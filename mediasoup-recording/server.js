@@ -5,7 +5,7 @@ require("util").inspect.defaultOptions.depth = null;
 
 const CONFIG = require("./config");
 const Express = require("express");
-const FFmpegStatic = require("ffmpeg-static");
+// const FFmpegStatic = require("ffmpeg-static");
 const Fs = require("fs");
 const Https = require("https");
 const Mediasoup = require("mediasoup");
@@ -506,8 +506,8 @@ function startRecordingFfmpeg() {
   const useVideo = videoEnabled();
   const useH264 = h264Enabled();
 
-  // const cmdProgram = "ffmpeg"; // Found through $PATH
-  const cmdProgram = FFmpegStatic; // From package "ffmpeg-static"
+  const cmdProgram = "ffmpeg"; // Found through $PATH
+  // const cmdProgram = FFmpegStatic; // From package "ffmpeg-static"
 
   let cmdInputPath = `${__dirname}/recording/input-vp8.sdp`;
   let cmdOutputPath = `${__dirname}/recording/output-ffmpeg-vp8.webm`;

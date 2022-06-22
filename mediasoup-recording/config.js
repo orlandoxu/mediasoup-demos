@@ -90,14 +90,6 @@ module.exports = {
         // RTCRtpEncodingParameters[]
         encodings: [
           {
-            maxBitrate: 100000,
-            // maxFramerate: 15.0,
-            // scaleResolutionDownBy: 1.5,
-          },
-          {
-            maxBitrate: 300000,
-          },
-          {
             maxBitrate: 900000,
           },
         ],
