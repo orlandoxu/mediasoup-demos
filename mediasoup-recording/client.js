@@ -235,10 +235,12 @@ async function startWebrtcSend() {
 
   let stream;
   try {
-    stream = await navigator.mediaDevices.getUserMedia({
-      audio: useAudio,
-      video: useVideo,
-    });
+    // 共享桌面
+    stream = await navigator.mediaDevices.getDisplayMedia()
+    // stream = await navigator.mediaDevices.getUserMedia({
+    //   audio: useAudio,
+    //   video: useVideo,
+    // });
   } catch (err) {
     console.error(err);
     return;

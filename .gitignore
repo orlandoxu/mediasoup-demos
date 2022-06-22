@@ -121,3 +121,5 @@ dist
 
 # Build artifact(s)
 client-bundle.js
+.idea
+mediasoup-recording/.idea/
